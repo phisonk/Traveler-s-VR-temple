@@ -48,6 +48,8 @@ public class Poetry : MonoBehaviour
         poetryFortune.GetComponent<Menu>().isActive();
         number.GetComponent<Menu>().isActive();
         yield return new WaitForSeconds(1);
+        ResetPoetry();
+
     }
     public void ResetPoetry()
     {
