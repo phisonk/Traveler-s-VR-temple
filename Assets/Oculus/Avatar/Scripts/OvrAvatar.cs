@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using System.Collections;
 using System;
 using Oculus.Avatar;
@@ -175,10 +176,10 @@ public class OvrAvatar : MonoBehaviour
     internal OvrAvatarHand HandRight = null;
     internal ovrAvatarLookAndFeelVersion LookAndFeelVersion = ovrAvatarLookAndFeelVersion.Two;
     internal ovrAvatarLookAndFeelVersion FallbackLookAndFeelVersion = ovrAvatarLookAndFeelVersion.Two;
-#if AVATAR_INTERNAL
-    public AvatarControllerBlend BlendController;
+//#if AVATAR_INTERNAL
+    //public AvatarControllerBlend BlendController;
     public UnityEvent AssetsDoneLoading = new UnityEvent();
-#endif
+//#endif
 
     // Avatar packets
     public class PacketEventArgs : EventArgs
