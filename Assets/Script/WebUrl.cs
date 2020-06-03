@@ -16,6 +16,6 @@ public class WebUrl : MonoBehaviour
         
     }
     public void openWebURL() {
-        Application.OpenURL("www.google.com");
+        Application.OpenURL("https://vr-traveler.web.app");
     }
 }
