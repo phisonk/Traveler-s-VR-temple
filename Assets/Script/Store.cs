@@ -68,10 +68,11 @@ public class Store : MonoBehaviour
         RequestHelper requestOptions = null;
         RestClient.Get<walletAmount>(basePath+"/amount?name=phison").Then(res =>
         {
+            //res = JsonUtility.ToJson(res, true);
             int divider = 100;
-            int newamount = res.amounts();
+            int newamount = res.amount;
             print(amount.GetType());
-            amount = newamount / divider;
+            amount += (newamount / divider)-amount;
             print(amount);
         }).Catch(err => print("Error" + err.Message));
         //return true;
